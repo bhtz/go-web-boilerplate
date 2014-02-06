@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./api"
-	"./controllers"
+	"./app/api"
+	"./app/controllers"
 	"./db"
 	"github.com/codegangsta/martini"
 	"github.com/codegangsta/martini-contrib/render"
@@ -36,7 +36,7 @@ func loadApiControllers(app *martini.ClassicMartini) {
 func configuration(app *martini.ClassicMartini) {
 	app.Use(martini.Static("public"))
 	app.Use(render.Renderer(render.Options{
-		Directory:  "views",
+		Directory:  "app/views",
 		Layout:     "layout",
 		Charset:    "UTF-8",
 		IndentJSON: true,

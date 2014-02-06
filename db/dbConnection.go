@@ -28,7 +28,7 @@ type Config struct {
 func Init() {
 	file, err := ioutil.ReadFile("./configs/database.json")
 	if err != nil {
-		panic(fmt.Sprintf("File error: %v\n", err))
+		panic(fmt.Sprintf("database.json configuration file error: %v\n", err))
 	}
 
 	var config Config

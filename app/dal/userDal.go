@@ -1,7 +1,7 @@
 package dal
 
 import (
-	"../db"
+	"../../db"
 	"../models"
 )
 
