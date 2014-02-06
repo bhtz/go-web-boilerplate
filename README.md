@@ -13,10 +13,13 @@ Getting started
 
 Run the following commands:
 	
-* Install martini and martini-contrib
+* Install martini and martini-contrib.
 
 		go get github.com/codegangsta/martini
 		go get github.com/codegangsta/martini-contrib/...
+
+* Create a new mysql database.
+* Edit ./config/database.json according to your database configuration.
 
 * Build & run application
 
