@@ -3,6 +3,7 @@ package main
 import (
 	"./api"
 	"./controllers"
+	"./db"
 	"github.com/codegangsta/martini"
 	"github.com/codegangsta/martini-contrib/render"
 )
@@ -11,7 +12,8 @@ import (
  * Connect to database.
  */
 func dbConnection() {
-
+	db.Init()
+	db.CreateTables()
 }
 
 /**
