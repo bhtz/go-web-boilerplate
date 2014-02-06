@@ -19,7 +19,7 @@ Run the following commands:
 		go get github.com/codegangsta/martini-contrib/...
 
 * Create a new mysql database.
-* Edit ./config/database.json according to your database configuration.
+* Edit ./configs/database.json according to your database configuration.
 
 * Build & run application
 

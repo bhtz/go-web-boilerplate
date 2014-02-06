@@ -1,8 +1,8 @@
 {
     "name": "testgo",
     "user": "root",
-    "password": "",
+    "password": "toor",
     "host": "localhost",
-    "port": 3306,
+    "port": "3306",
     "dialect": "mysql"
 }
