@@ -2,6 +2,7 @@ package db
 
 import (
 	"../app/models"
+	"fmt"
 )
 
 /**
@@ -9,6 +10,7 @@ import (
  */
 func CreateTables() {
 	DB.CreateTable(models.User{})
+	fmt.Printf("database tables created\n")
 }
 
 /**
@@ -16,6 +18,7 @@ func CreateTables() {
  */
 func DropTables() {
 	DB.DropTable(models.User{})
+	fmt.Printf("database tables dropped\n")
 }
 
 /**
@@ -23,4 +26,5 @@ func DropTables() {
  */
 func Migrate() {
 	DB.AutoMigrate(models.User{})
+	fmt.Printf("migration end\n")
 }

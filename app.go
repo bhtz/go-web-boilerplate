@@ -14,6 +14,7 @@ import (
 func dbConnection() {
 	db.Init()
 	db.CreateTables()
+	db.RunFixtures()
 }
 
 /**
