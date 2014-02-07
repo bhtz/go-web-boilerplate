@@ -31,7 +31,6 @@ func NewUserApiController(app *martini.ClassicMartini) UserApiController {
  * define controller routing.
  */
 func (this *UserApiController) routes() {
-	this.app.Get("/api/users/self", this.connected)
 	this.app.Get("/api/users/:id", this.get)
 	this.app.Get("/api/users", this.getAll)
 }
@@ -54,13 +53,5 @@ func (this *UserApiController) get(w http.ResponseWriter, params martini.Params,
 		return
 	}
 	user = this.userDal.Get(id)
-	r.JSON(200, user)
-}
-
-/**
- * get connected user action.
- */
-func (this *UserApiController) connected(r render.Render) {
-	user := this.userDal.GetUser()
 	r.JSON(200, user)
 }

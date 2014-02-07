@@ -34,9 +34,13 @@ func Init() {
 	var config Config
 	json.Unmarshal(file, &config)
 
+	fmt.Printf("... connecting database ...\n")
 	DB, err = gorm.Open(config.Dialect, config.User+":"+config.Password+"@/"+config.Name)
 
 	if err != nil {
 		panic(fmt.Sprintf("Got error when connect database, the error is '%v'", err))
+	} else {
+		fmt.Printf("database connected !!!\n")
 	}
+
 }
